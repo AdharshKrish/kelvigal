@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600dp"
+    tools:context=".topiclogos">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgg2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp">
+
+            <ImageButton
+                android:id="@+id/OptionA"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/alligation"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorners"
+                android:textSize="60sp" />
+
+            <ImageButton
+                android:id="@+id/OptionB"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:src="@drawable/calendar"
+                android:textSize="60sp" />
+
+            <ImageButton
+                android:id="@+id/button_08"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/boats"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ALLIGATIONS AND MIXTURES"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:text="CALENDAR"
+
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                               android:text="BOATS AND STREAMS"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp">
+
+            <ImageButton
+                android:id="@+id/OptionC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/log"
+                android:layout_margin="10dp"
+                android:background="@drawable/roundcorners"
+                android:textSize="60sp" />
+
+            <ImageButton
+                android:id="@+id/OptionD"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/probability"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:textSize="60sp" />
+
+            <ImageButton
+                android:id="@+id/button_11"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/train"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:textSize="60sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LOGARITHM"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PROBABILITY"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TRAINS"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="50dp">
+            <ImageButton
+                android:id="@+id/button_12"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/timeaw"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:textSize="60sp"/>
+            <ImageButton
+                android:id="@+id/button_13"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/profit"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:textSize="60sp"/>
+
+            <ImageButton
+                android:id="@+id/button_14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/percentage"
+                android:background="@drawable/roundcorners"
+                android:layout_margin="10dp"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TIME AND WORK"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PROFIT AND LOSS"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PERCENTAGE"
+                android:textAlignment="center"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:fontFamily="sans-serif" />
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

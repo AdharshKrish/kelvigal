@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgg2"
+    android:orientation="vertical"
+    tools:context=".Login2">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:id="@+id/container">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bgg2"
+            android:text="Know your APTITUDE \n\n We help you garnish your skills on Aptitude, Take frequent tests and see your growth. \n \nTo practice Daily tests, click on the reminder below, We help you in all ways:)"
+            android:textAlignment="center"
+            android:textSize="29dp"
+            app:fontFamily="@font/berkshire_swash" />
+
+        <Button
+            android:id="@+id/bn"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="500sp"
+            android:layout_marginEnd="107dp"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="133dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="418sp"
+            android:text="SET REMINDER" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
