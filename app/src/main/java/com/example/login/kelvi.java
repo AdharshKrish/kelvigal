@@ -26,6 +26,7 @@ public class kelvi extends AppCompatActivity {
     int correct=0;
     int wrong=0;
     int total=0;
+    String[] a=new String[6];
 
     int computerCount=0;
 
@@ -33,7 +34,7 @@ public class kelvi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_kelvi);
         b1 = (Button) findViewById(R.id.OptionA);
         b2 = (Button) findViewById(R.id.OptionB);
         b3 = (Button) findViewById(R.id.OptionC);
@@ -63,23 +64,30 @@ public class kelvi extends AppCompatActivity {
         }
         else
         {
-            databaseReference = FirebaseDatabase.getInstance().getReference().child("Questions").child(String.valueOf(computerCount));
+            databaseReference = FirebaseDatabase.getInstance().getReference().child("hi").child(String.valueOf(computerCount));
             total++;
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    final Question question = dataSnapshot.getValue(Question.class);
-                    questionTxt.setText(question.getQuestion());
-                    b1.setText(question.getOption1());
-                    b2.setText(question.getOption2());
-                    b3.setText(question.getOption3());
-                    b4.setText(question.getOption4());
+                 //   final Question question = dataSnapshot.getValue(Question.class);
+                    int i=0;
+                    for(DataSnapshot data:dataSnapshot.getChildren())
+                    {
+                        a[i]= data.getValue().toString();
+i++;
+                    }
+                    Toast.makeText(kelvi.this,a[0],Toast.LENGTH_LONG).show();
+                    questionTxt.setText(a[5]);
+                    b1.setText(a[1]);
+                    b2.setText(a[2]);
+                    b3.setText(a[3]);
+                    b4.setText(a[4]);
 
 
                     b1.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(b1.getText().toString().equals(question.answer))
+                            if(b1.getText().toString().equals(a[0]))
                             {
                                 Toast.makeText(getApplicationContext(),"Correct answer",Toast.LENGTH_SHORT).show();
                                 b1.setBackgroundColor(Color.GREEN);
@@ -101,15 +109,15 @@ public class kelvi extends AppCompatActivity {
 
                                 b1.setBackgroundColor(Color.RED);
 
-                                if(b2.getText().toString().equals(question.getAnswer()))
+                                if(b2.getText().toString().equals(a[0]))
                                 {
                                     b2.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b3.getText().toString().equals(question.getAnswer()))
+                                else if(b3.getText().toString().equals(a[0]))
                                 {
                                     b3.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b4.getText().toString().equals(question.getAnswer()))
+                                else if(b4.getText().toString().equals(a[0]))
                                 {
                                     b4.setBackgroundColor(Color.GREEN);
                                 }
@@ -138,7 +146,7 @@ public class kelvi extends AppCompatActivity {
                     b2.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(b2.getText().toString().equals(question.answer))
+                            if(b2.getText().toString().equals(a[0]))
                             {
                                 correct = correct + 1;
                                 Toast.makeText(getApplicationContext(),"Correct answer",Toast.LENGTH_SHORT).show();
@@ -159,15 +167,15 @@ public class kelvi extends AppCompatActivity {
 
                                 b2.setBackgroundColor(Color.RED);
 
-                                if(b1.getText().toString().equals(question.getAnswer()))
+                                if(b1.getText().toString().equals(a[0]))
                                 {
                                     b1.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b3.getText().toString().equals(question.getAnswer()))
+                                else if(b3.getText().toString().equals(a[0]))
                                 {
                                     b3.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b4.getText().toString().equals(question.getAnswer()))
+                                else if(b4.getText().toString().equals(a[0]))
                                 {
                                     b4.setBackgroundColor(Color.GREEN);
                                 }
@@ -193,7 +201,7 @@ public class kelvi extends AppCompatActivity {
                     b3.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(b3.getText().toString().equals(question.answer))
+                            if(b3.getText().toString().equals(a[0]))
                             {
                                 correct++;
                                 Toast.makeText(getApplicationContext(),"Correct answer",Toast.LENGTH_SHORT).show();
@@ -216,15 +224,15 @@ public class kelvi extends AppCompatActivity {
 
                                 b3.setBackgroundColor(Color.RED);
 
-                                if(b1.getText().toString().equals(question.getAnswer()))
+                                if(b1.getText().toString().equals(a[0]))
                                 {
                                     b1.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b2.getText().toString().equals(question.getAnswer()))
+                                else if(b2.getText().toString().equals(a[0]))
                                 {
                                     b2.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b4.getText().toString().equals(question.getAnswer()))
+                                else if(b4.getText().toString().equals(a[0]))
                                 {
                                     b4.setBackgroundColor(Color.GREEN);
                                 }
@@ -250,7 +258,7 @@ public class kelvi extends AppCompatActivity {
                     b4.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            if(b4.getText().toString().equals(question.answer))
+                            if(b4.getText().toString().equals(a[0]))
                             {
                                 correct++;
                                 Toast.makeText(getApplicationContext(),"Correct answer",Toast.LENGTH_SHORT).show();
@@ -272,15 +280,15 @@ public class kelvi extends AppCompatActivity {
                                 // make it red , and make right one Green
                                 b4.setBackgroundColor(Color.RED);
 
-                                if(b1.getText().toString().equals(question.getAnswer()))
+                                if(b1.getText().toString().equals(a[0]))
                                 {
                                     b1.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b2.getText().toString().equals(question.getAnswer()))
+                                else if(b2.getText().toString().equals(a[0]))
                                 {
                                     b2.setBackgroundColor(Color.GREEN);
                                 }
-                                else if(b3.getText().toString().equals(question.getAnswer()))
+                                else if(b3.getText().toString().equals(a[0]))
                                 {
                                     b3.setBackgroundColor(Color.GREEN);
                                 }

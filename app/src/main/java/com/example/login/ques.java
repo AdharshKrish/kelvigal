@@ -43,7 +43,7 @@ public class ques extends AppCompatActivity {
         textView4 =(TextView)findViewById(R.id.textView4);
 
 
-        updateQuestion();
+       updateQuestion();
 
     }
 
@@ -69,7 +69,8 @@ public class ques extends AppCompatActivity {
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    final Question question = dataSnapshot.getValue(Question.class);
+                    Toast.makeText(ques.this,dataSnapshot.getChildrenCount()+" "+dataSnapshot.getRef(),Toast.LENGTH_SHORT).show();
+                  /*  final Question question = dataSnapshot.getValue(Question.class);
                     questionTxt.setText(question.getQuestion());
                     b1.setText(question.getOption1());
                     b2.setText(question.getOption2());
@@ -299,7 +300,7 @@ public class ques extends AppCompatActivity {
                                 }, 1500);
                             }
                         }
-                    });
+                    });*/
 
 
 
